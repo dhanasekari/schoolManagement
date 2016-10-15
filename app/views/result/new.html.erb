@@ -1,0 +1,14 @@
+<h1>Add New</h1>
+
+<%= form_tag :action => 'create' do %>
+<p><label for = "student_id">StudentID</label>:
+<%= text_field 'result', 'student_id' %></p>
+<p><label for = "exam_id">ExamID</label>:
+<%= text_field 'result', 'exam_id' %></p>
+<p><label for = "marks">Marks</label>:
+<%= text_field 'result', 'marks' %></p>
+
+<%= submit_tag "Add" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'index'} %>

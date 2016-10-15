@@ -1,0 +1,10 @@
+<h1>Edit Records</h1>
+
+<%= form_for @attendance, :url =>{:action => "update", :student_id =>@attendance} do |at| %>
+
+<p>Day: <%= at.text_field 'day' %></p>
+<p>Status: <%= at.text_field 'status' %></p>
+<%= s.submit "Save changes" %>
+<% end %>
+
+<%= link_to 'Back', {:action => 'index' } %>

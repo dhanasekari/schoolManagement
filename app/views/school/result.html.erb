@@ -1,0 +1,13 @@
+<table>
+	<tr>
+		<th>Marks</th>
+		<th>StudentName</th>
+	</tr>
+<% @result.each do |res| %>
+<tr>
+<td><%= res.marks%></td>
+<td><%= res.student.fname%></td>
+<% end %>
+</tr>
+</table>
+<%= link_to 'Back', {:action => 'index'} %>

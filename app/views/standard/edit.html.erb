@@ -1,0 +1,10 @@
+<h1>Edit Stanards</h1>
+
+<%= form_for @standard, :url =>{:action => "update", :id =>@standard} do |s| %>
+
+<p>Description: <%= s.text_field 'description' %></p>
+
+<%= s.submit "Save changes" %>
+<% end %>
+
+<%= link_to 'Back', {:action => 'index' } %>

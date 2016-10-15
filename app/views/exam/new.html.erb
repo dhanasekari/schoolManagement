@@ -1,0 +1,10 @@
+<h1>Add New</h1>
+
+<%= form_tag :action => 'create' do %>
+<p><label for = "exam_name">ExamName</label>:
+<%= text_field 'exam', 'ExamName' %></p>
+
+<%= submit_tag "Add" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'index'} %>

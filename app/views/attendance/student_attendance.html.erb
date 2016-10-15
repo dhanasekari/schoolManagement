@@ -1,0 +1,8 @@
+<h1><%= @student.id %></h1>
+<p>
+	<% @attend.each do |a| %>
+	 <strong>Day: </strong> <%= a.day %><br /> 
+	 <strong>Status: </strong> <%= a.status %><br /> 
+	  <% end %>
+</p>
+<%= link_to 'Back', {:action => 'index'} %>

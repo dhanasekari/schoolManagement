@@ -1,0 +1,14 @@
+<table>
+	<tr>
+		<th>FirstName</th>
+		<th>LastName</th>
+	</tr>
+<% @student.each do |stud| %>
+<tr>
+<td><%= stud.fname%></td>
+<td><%= stud.lname%></td>
+
+<% end %>
+</tr>
+</table>
+<%= link_to "Exam", exam_path%>

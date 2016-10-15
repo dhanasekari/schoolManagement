@@ -1,0 +1,20 @@
+<% if @exams.blank? %>
+<p>There is no fields.</p>
+<% else %>
+<p>Available Records</p>
+
+<ul id = "exams">
+   <% @exams.each do |e| %>
+   <li><%= link_to e.ExamName, {:action => 'show', :id => e.id} -%>
+   	
+   	<b> <%= link_to 'Edit', {:action => "edit",
+   		:id => e.id} %></b>
+    <b> <%= link_to "Delete", {:action => 'delete', :id => e.id},
+      :confirm => "Are you sure you want to delete this item?" %></b>
+   
+   </li>
+   <% end %>
+</ul>
+
+<% end %>
+<p><%= link_to "Add new fields", {:action => 'new' }%></p>

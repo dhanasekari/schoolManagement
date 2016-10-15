@@ -1,0 +1,16 @@
+<table>
+	<tr>
+		<th>Standard</th>
+		<th>SchoolName</th>
+	</tr>
+	<% @standard.each do |standard| %>
+	<tr>
+		
+		<td><%= standard.description %></td>
+		<td><%= standard.school.name %></td>
+		<% end %>
+	</tr>
+	
+</table>
+
+<%= link_to "Section", section_path%>

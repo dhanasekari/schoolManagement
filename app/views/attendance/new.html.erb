@@ -1,0 +1,16 @@
+<h1>Add new Record</h1>
+
+<%= form_tag :action => 'create' do %>
+<p><label for = "day">Day</label>:
+<%= text_field 'attendance', 'day' %></p>
+
+<p><label for = "status">Status</label>:
+<%= text_field 'attendance', 'status' %></p>
+
+<p><label for = "student_id">Student_id</label>:
+<%= collection_select(:attendance, :student_id, @student, :id, :id, prompt: true) %></p>
+
+<%= submit_tag "Add" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'index'} %>

@@ -1,0 +1,11 @@
+<h1><%= @attendance.student_id %></h1>
+
+<p>
+	 <strong>Day: </strong> <%= @attendance.day %><br /> 
+	 <strong>Status: </strong> <%= @attendance.status %><br /> 
+	  
+   <strong>Created Date:</strong> <%= @attendance.created_at %><br />
+</p>
+<hr />
+
+<%= link_to 'Back', {:action => 'index'} %>

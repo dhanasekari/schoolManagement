@@ -1,0 +1,11 @@
+<h1>Edit Results</h1>
+
+<%= form_for @result, :url =>{:action => "update", :id =>@result} do |r| %>
+
+<p>Marks: <%= r.text_field 'marks' %></p>
+<p>StudentID: <%= r.text_field 'student_id' %></p>
+<p>ExamID: <%= r.text_field 'exam_id' %></p>
+<%= r.submit "Save changes" %>
+<% end %>
+
+<%= link_to 'Back', {:action => 'index' } %>

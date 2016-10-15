@@ -1,0 +1,13 @@
+<h1><%= @student.fname %></h1>
+
+<p>
+	 <strong>FirstName: </strong> <%= @student.fname %><br /> 
+	 <strong>LastName: </strong> <%= @student.lname %><br /> 
+	 <strong>DOB: </strong> <%= @student.dob %><br /> 	 
+     <strong>Address: </strong> <%= @student.address %><br /> 
+	 <strong>Section: </strong> <%= @student.section_id %><br />	 
+   <strong>Created Date:</strong> <%= @student.created_at %><br />
+</p>
+<hr />
+
+<%= link_to 'Back', {:action => 'index'} %>

@@ -1,0 +1,22 @@
+<h1>Add new Student</h1>
+
+<%= form_tag :action => 'create' do %>
+<p><label for = "first_name">FristName</label>:
+<%= text_field 'student', 'fname' %></p>
+
+<p><label for = "last_name">LastName</label>:
+<%= text_field 'student', 'lname' %></p>
+
+<p><label for = "date_of_birth">DOB</label>:
+<%= text_field 'student', 'dob' %></p>
+
+<p><label for = "address">Address</label>:
+<%= text_field 'student', 'address' %></p>
+
+<p><label for = "section">Section</label>:
+<%= collection_select(:student, :section_id, @section, :id, :sectionName, prompt: true) %></p>
+
+<%= submit_tag "Add" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'index'} %>

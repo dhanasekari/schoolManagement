@@ -1,0 +1,22 @@
+<h1>Add new Teachers</h1>
+
+<%= form_tag :action => 'create' do %>
+<p><label for = "first_name">FristName</label>:
+<%= text_field 'teacher', 'fname' %></p>
+
+<p><label for = "last_name">LastName</label>:
+<%= text_field 'teacher', 'lname' %></p>
+
+<p><label for = "date_of_birth">DOB</label>:
+<%= text_field 'teacher', 'dob' %></p>
+
+<p><label for = "address">Contact</label>:
+<%= text_field 'teacher', 'mobile' %></p>
+
+<p><label for = "standard">Standard</label>:
+<%= collection_select(:teacher, :standard_id, @standard, :id, :description, prompt: true) %></p>
+
+<%= submit_tag "Add" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'index'} %>

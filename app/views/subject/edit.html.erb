@@ -1,0 +1,10 @@
+<h1>Edit Subjects</h1>
+
+<%= form_for @subject, :url =>{:action => "update", :id =>@subject} do |s| %>
+
+<p>SubjectName: <%= s.text_field 'SubjectName' %></p>
+
+<%= s.submit "Save changes" %>
+<% end %>
+
+<%= link_to 'Back', {:action => 'index' } %>

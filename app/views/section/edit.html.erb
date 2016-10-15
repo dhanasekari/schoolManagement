@@ -1,0 +1,10 @@
+<h1>Edit Sections</h1>
+
+<%= form_for @section, :url =>{:action => "update", :id =>@section} do |s| %>
+
+<p>SectionName: <%= s.text_field 'sectionName' %></p>
+
+<%= s.submit "Save changes" %>
+<% end %>
+
+<%= link_to 'Back', {:action => 'index' } %>

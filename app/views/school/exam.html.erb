@@ -1,0 +1,13 @@
+<table>
+	<tr>
+		<th>ExamName</th>
+		<th>StudentName</th>
+	</tr>
+<% @exam.each do |exam| %>
+<tr>
+<td><%= exam.ExamName%></td>
+<td><%= exam.student.fname%></td>
+<% end %>
+</tr>
+</table>
+<%= link_to "Result", result_path%>

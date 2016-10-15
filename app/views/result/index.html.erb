@@ -1,0 +1,20 @@
+<% if @results.blank? %>
+<p>There is no fields.</p>
+<% else %>
+<p>Available Records</p>
+
+<ul id = "results">
+   <% @results.each do |r| %>
+   <li><%= link_to r.marks, {:action => 'show', :id => r.id} -%>
+   	
+   	<b> <%= link_to 'Edit', {:action => "edit",
+   		:id => r.id} %></b>
+    <b> <%= link_to "Delete", {:action => 'delete', :id => r.id},
+      :confirm => "Are you sure you want to delete this item?" %></b>
+   
+   </li>
+   <% end %>
+</ul>
+
+<% end %>
+<p><%= link_to "Add new fields", {:action => 'new' }%></p>

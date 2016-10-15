@@ -1,0 +1,20 @@
+<% if @students.blank? %>
+<p>There is no students.</p>
+<% else %>
+<p>Available students</p>
+
+<ul id = "students">
+   <% @students.each do |student| %>
+   <li><%= link_to student.fname, {:action => 'show', :id => student.id} -%>
+   	
+   	<b> <%= link_to 'Edit', {:action => "edit",
+   		:id => student.id} %></b>
+    <b> <%= link_to "Delete", {:action => 'delete', :id => student.id},
+      :confirm => "Are you sure you want to delete this item?" %></b>
+   
+   </li>
+   <% end %>
+</ul>
+
+<% end %>
+<p><%= link_to "Add new Students", {:action => 'new' }%></p>

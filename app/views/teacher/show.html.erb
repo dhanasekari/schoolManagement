@@ -1,0 +1,13 @@
+<h1><%= @teacher.fname %></h1>
+
+<p>
+	 <strong>FirstName: </strong> <%= @teacher.fname %><br /> 
+	 <strong>LastName: </strong> <%= @teacher.lname %><br /> 
+	 <strong>DOB: </strong> <%= @teacher.dob %><br /> 	 
+     <strong>Contact: </strong> <%= @teacher.mobile %><br /> 
+	 <strong>Standard: </strong> <%= @teacher.standard_id %><br />	 
+   <strong>Created Date:</strong> <%= @teacher.created_at %><br />
+</p>
+<hr />
+
+<%= link_to 'Back', {:action => 'index'} %>

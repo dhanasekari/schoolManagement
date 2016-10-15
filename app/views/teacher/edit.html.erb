@@ -1,0 +1,13 @@
+<h1>Edit Teacher Details</h1>
+
+<%= form_for @teacher, :url =>{:action => "update", :id =>@teacher} do |t| %>
+
+<p>FirstName: <%= t.text_field 'fname' %></p>
+<p>LastName: <%= t.text_field 'lname' %></p>
+<p>DOB: <%= t.text_field 'dob' %></p>
+<p>Contact: <%= t.text_field  'mobile' %></p>
+<p>Standard: <%= t.text_field  'standard_id' %></p>
+<%= t.submit "Save changes" %>
+<% end %>
+
+<%= link_to 'Back', {:action => 'index' } %>
